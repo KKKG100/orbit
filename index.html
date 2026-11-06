@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Orbital Frontier</title><link rel="stylesheet" href="style.css"></head><body>
+<canvas id="c"></canvas>
+<div id="hud" hidden>
+ <div id="tel" class="panel"></div>
+ <div id="top" class="panel"></div>
+ <div id="navw" class="panel"><canvas id="nav" width="130" height="130"></canvas><div id="thr"><i id="thrb"></i></div></div>
+ <div id="help" class="panel">
+  <b>CONTROLS</b><br>A/D rotate · Shift/Ctrl throttle · Z full · X cut<br>Space stage · T SAS · Y SAS mode<br>M map · F map focus · wheel zoom<br>. / , time warp · Enter chat · R rebuild · H hide
+ </div>
+</div>
+<div id="build" class="screen">
+ <aside id="plist"></aside>
+ <section id="center"><canvas id="pv"></canvas><div id="plabel">Click parts to add them to the bottom of the stack (top to bottom).</div></section>
+ <aside id="stats">
+  <h2>ORBITAL FRONTIER</h2>
+  <label>Pilot <input id="pname" maxlength="16"></label>
+  <label>Vessel <input id="vname" value="Explorer 1" maxlength="20"></label>
+  <label>Color <input id="vcol" type="color" value="#4aa3ff"></label>
+  <div id="sinfo"></div><div id="stackl"></div>
+  <div class="row"><button id="bstart">Starter</button><button id="bclear">Clear</button></div>
+  <button id="blaunch" class="go">LAUNCH ▶</button>
+  <div id="online"></div>
+ </aside>
+</div>
+<div id="toast"></div>
+<div id="chat"><div id="log"></div><input id="ci" placeholder="Enter = chat" maxlength="200"></div>
+<script src="data.js"></script><script src="game.js"></script></body></html>
